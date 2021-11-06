@@ -1,0 +1,54 @@
+/* Fil rouge : selecteur dimensions couleurs*/
+/* Texte */
+/* Background */
+/* Boxes */
+/* Positionning */
+/* Flex */
+/* Grid */
+/* Pseudo Classe */
+/* Debug */
+/* Responsive */
+
+/*Texte*/
+/*Si on veut importer des fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+/*Si on veut avoir la police dans notre projet*/
+@font-face {
+  font-family: "font-1";
+  /*important permet de factoriser les nommages de police*/
+  src: url(./assets/Fruktur-Regular.ttf);
+}
+
+body {
+  font-family: "font-1", serif;
+  /*background: darkgray;*/
+  background: url(./assets/bg.jpg) center/cover;
+  height: 100vh;
+}
+
+h1 {
+  /*text-transform: uppercase;*/
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+  /*font-family: "Dancing Script", cursive;*/
+  color: darkblue;
+  text-shadow: 2px 2px 5px rgb(18, 153, 153);
+  text-align: center;
+}
+/*choix des polices = google font*/
+
+/*https://www.pexels.com/fr-fr/ banque d'images gratuites
+https://pixabay.com/fr/
+*/
+
+main {
+  background: yellowgreen;
+  width: 80%;
+  min-height: 500px;
+  margin: 10px auto; /*marge haut bas + gauche droite -- autour de la boite*/
+  padding: 10px;
+  text-align: justify;
+  border-radius: 10px;
+  box-shadow: red 1px 2px 0px 0px;
+}
