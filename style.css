@@ -20,6 +20,14 @@
   src: url(./assets/Fruktur-Regular.ttf);
 }
 
+/*création d'un selecteur général sur tous les éléments*/
+/*
+* {
+  margin: 0px;
+  padding: 0px;
+}
+*/
+
 body {
   font-family: "font-1", serif;
   /*background: darkgray;*/
@@ -51,4 +59,64 @@ main {
   text-align: justify;
   border-radius: 10px;
   box-shadow: red 1px 2px 0px 0px;
+}
+
+.flexbox,
+.positioning {
+  border: 2px solid blue;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/*********************** Positioning **************************/
+.positioning {
+  position: relative;
+}
+
+/*définir des valeurs par default sur tous les h2 */
+h2 {
+  margin: 0px;
+}
+
+#circle {
+  height: 80px;
+  width: 80px;
+  background: yellow;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+
+  z-index: 0; /* sert a passrr par dessus ou derriere*/
+}
+
+#rectangle {
+  height: 20px;
+  width: 80px;
+  padding: 0px;
+  background: rgb(255, 94, 0);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*********************** flexbox **************************/
+ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px;
+}
+
+li {
+  list-style-type: none;
+  font-size: 0.7em;
+  height: 160px;
+  width: 220px;
+  background: white;
+  /* centrer verticalement*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
