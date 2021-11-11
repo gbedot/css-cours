@@ -28,6 +28,13 @@
 }
 */
 
+/*commande de debugging pour voir les élements */
+/*
+* {
+border: 2px red solid;
+}
+*/
+
 body {
   font-family: "font-1", serif;
   /*background: darkgray;*/
@@ -62,7 +69,8 @@ main {
 }
 
 .flexbox,
-.positioning {
+.positioning,
+.grid {
   border: 2px solid blue;
   padding: 10px;
   border-radius: 10px;
@@ -119,4 +127,78 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/*********************Grid*******************************/
+.grid-container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding: 20px;
+}
+
+.img {
+  text-align: center;
+}
+
+input,
+textarea {
+  margin: 5px;
+  height: 45px;
+  border: 1px solid darkblue;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "i1 i2"
+    "ta ta"
+    "bt bt";
+}
+
+#firstname {
+  grid-area: i1;
+}
+
+#lastname {
+  grid-area: i2;
+}
+
+textarea {
+  grid-area: ta;
+  resize: none;
+}
+
+input[type="submit"] {
+  grid-area: bt;
+  cursor: pointer;
+  background: pink;
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+  background: red;
+  color: white;
+}
+
+/***********Responsive********************/
+@media screen and (max-width: 820px) {
+  .grid-container {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 605px) {
+  form {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "i1"
+      "i2"
+      "ta"
+      "bt";
+  }
 }
